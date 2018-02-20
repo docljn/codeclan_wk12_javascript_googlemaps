@@ -25,8 +25,8 @@ MapWrapper.prototype.bounceMarkers = function () {
   this.markers.forEach(function (marker) {
     marker.setAnimation(google.maps.Animation.BOUNCE);
   });
+};
 
-  MapWrapper.prototype.moveMap = function (coordinates) {
-    
-  };
+MapWrapper.prototype.moveMap = function (coordinateObject) {
+  this.googleMap.panTo(coordinateObject);
 };
