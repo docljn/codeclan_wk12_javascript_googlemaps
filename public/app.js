@@ -25,11 +25,12 @@ const initialize = function(){
   const bounceButton = document.querySelector("#button-bounce-markers");
   bounceButton.addEventListener("click", mainMap.bounceMarkers.bind(mainMap));
 
+
+  // This is where it all goes wrong....
+
   const hellButton = document.querySelector("#button-goto-hell");
-  hellButton.addEventListener("click", function () {
-    console.log(this.google);
-    // this.google.maps.googleMap.moveMap(hell);
-  }.bind(this));
+  hellButton.addEventListener("click", mainMap.moveMap(hell));
+
 };
 
 window.addEventListener("load", initialize);
