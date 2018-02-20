@@ -29,7 +29,7 @@ const initialize = function(){
   // This is where it all goes wrong....
 
   const hellButton = document.querySelector("#button-goto-hell");
-  hellButton.addEventListener("click", mainMap.moveMap(hell));
+  hellButton.addEventListener("click", mainMap.moveMap.bind(mainMap,hell));
 
 };
 
