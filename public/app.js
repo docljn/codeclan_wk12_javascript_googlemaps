@@ -29,8 +29,9 @@ const initialize = function(){
   // This is where it all goes wrong....
 
   const hellButton = document.querySelector("#button-goto-hell");
-  hellButton.addEventListener("click", mainMap.moveMap.bind(mainMap,hell));
-
+  hellButton.addEventListener("click", function(){
+    mainMap.moveMap(hell);
+  })
 };
 
 window.addEventListener("load", initialize);

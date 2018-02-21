@@ -4,6 +4,7 @@ const MapWrapper = function (container, coords, zoom) {
     zoom: zoom
   });
   this.markers = [];
+  this.moveMap = this.moveMap.bind(this);
 };
 
 MapWrapper.prototype.addMarker = function (coords) {
